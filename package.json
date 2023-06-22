@@ -1,0 +1,19 @@
+{
+  "name": "yaadein-api",
+  "version": "1.0.0",
+  "description": "Yaadein is a REST API. This API is all about old Hindi. songs and their details. Anybody can use this API to build their website related to old Hindi songs. And this is also my first public API using NodeJS.",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "debug": "ndb server.js"
+  },
+  "author": "Subham Saha",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^7.3.1",
+    "morgan": "^1.10.0",
+    "validator": "^13.9.0"
+  }
+}
