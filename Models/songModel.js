@@ -9,30 +9,29 @@ const songSchema = new mongoose.Schema(
       required: [true, 'A song must have a name!'],
       unique: true,
       trim: true,
-      validate: [validator.isAlpha, 'Song name must only contain characters'],
     },
     slug: String,
     lyricist: {
       type: String,
       required: [true, 'A song must have a lyricist!'],
       trim: true,
-      validate: [
-        validator.isAlpha,
-        'lyricist name must only contain characters',
-      ],
     },
     singer: {
       type: [String],
       required: [true, 'A song must have a singer name!'],
       trim: true,
-      validate: [
-        validator.isAlpha,
-        'Singer names must only contain characters',
-      ],
     },
-    releaseDate: {
-      type: Date,
-      required: [true, 'Release date is required!'],
+    movieName: {
+      type: String,
+      required: [true, 'A song must belong to movie!'],
+      trim: true,
+    },
+    releaseDate: Date,
+    rating: {
+      type: Number,
+      default: 4.0,
+      min: [1, 'Rating must be above 1.0'],
+      max: [5, 'Rating must be below 5.0'],
     },
   },
   {
@@ -46,3 +45,7 @@ songSchema.pre('save', function (next) {
   this.slug = slugify(this.name, { lower: true });
   next();
 });
+
+const Song = mongoose.model('Song', songSchema);
+
+module.exports = Song;
