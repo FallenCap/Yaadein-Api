@@ -3,7 +3,16 @@ const songController = require('../Controllers/songController');
 
 const router = express.Router();
 
-// *defining Routes
+// TODO:defining Routes
+
+// *top-5-rated-songs
+router
+  .route('/top-5-rated-songs')
+  .get(songController.aliasTopSongs, songController.getAllSongs);
+
+// * Lata Mangeshkar specia;
+router.route('/lata-mangeshkar-special').get(songController.getLataSpecial);
+
 router
   .route('/')
   .get(songController.getAllSongs)
