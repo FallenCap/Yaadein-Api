@@ -14,9 +14,6 @@ if (process.env.NODE_ENV === 'development') {
 app.use(express.json());
 
 // *Routes
-app.use('', (res, req) => {
-  res.send('Hello From Yaadein');
-});
 app.use('/api/v1/songs', songRouter);
 
 // TODO: Handeling the errors of undefined routes
