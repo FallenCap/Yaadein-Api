@@ -13,6 +13,12 @@ if (process.env.NODE_ENV === 'development') {
 }
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res
+    .status(200)
+    .send('Welcome to Yaadein to browse the evergreen hindi classics📻🎼');
+});
+
 // *Routes
 app.use('/api/v1/songs', songRouter);
 

@@ -27,12 +27,12 @@ const songSchema = new mongoose.Schema(
       trim: true,
     },
     releaseDate: Date,
-    rating: {
-      type: Number,
-      default: 4.0,
-      min: [1, 'Rating must be above 1.0'],
-      max: [5, 'Rating must be below 5.0'],
-    },
+    // rating: {
+    //   type: Number,
+    //   default: 4.0,
+    //   min: [1, 'Rating must be above 1.0'],
+    //   max: [5, 'Rating must be below 5.0'],
+    // },
   },
   {
     toJSON: { virtuals: true },
