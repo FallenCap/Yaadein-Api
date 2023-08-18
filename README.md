@@ -3,4 +3,5 @@
 <br/>
 <h2>How to use</h2>
 <br/>
+<b>Main link:</b>&nbsp<p>https://yaadein.onrender.com/</p>
 
