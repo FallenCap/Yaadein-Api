@@ -6,7 +6,17 @@
 <br/>
 You can fetch data using get request in postman or any other npm package like axios in your software.
 <h3>Routes</h3>
-<p><b>i)For fetching data:</b> //yaadein.onrender.com/api/v1/songs</p>
-<p><b>ii)For fetching data by id:</b> //yaadein.onrender.com/api/v1/songs/:id</p>
+<p><b>i)For fetching data:</b> https://yaadein.onrender.com/api/v1/songs</p>
+<p><b>ii)For fetching data by id:</b> https://yaadein.onrender.com/api/v1/songs/:id</p>
+
+<h3>Features</h3>
+<p><b>i)Filter:</b> https://yaadein.onrender.com/api/v1/songs?singer=Lata Mangeshkar</p>
+<p><b>ii)Sort:</b> https://yaadein.onrender.com/api/v1/songs?sort=-releaseDate</p>
+<p><b>iii)Limiting Field:</b> https://yaadein.onrender.com/api/v1/songs?fields=name, singer</p>
+<p><b>iv)Paginate:</b> https://yaadein.onrender.com/api/v1/songs?page=2&limit=3</p>
+
+<h3>Special Routes</h3>
+<p><b>i)</b> https://yaadein.onrender.com/api/v1/songs/lata-mangeshkar-special</p>
+
 
 
